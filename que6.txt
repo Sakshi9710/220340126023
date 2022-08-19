@@ -1,0 +1,21 @@
+
+github url :=>https://github.com/Sakshi9710/220340126023.git
+prn no => 220340126023
+
+
+Steps to add file in docker hub:
+
+git init
+  git clone https://github.com/Sakshi9710/220340126023.git
+ cd 220340126023/
+  ls
+  git add .
+ git status
+  git branch
+  global user.email janghelsakshi08@gmail.com
+  git config --global user.email janghelsakshi08@gmail.com
+ git status
+ git commit -m "My Exam Code "
+  git branch
+ git push -u origin master
+
