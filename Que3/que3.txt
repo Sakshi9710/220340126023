@@ -1,0 +1,7 @@
+1)Log in to your Aws account
+2)Go to IAM and then Access Management
+3)Go to users => Add user
+4)Make a user dev_iot and set password
+5)Set Permission boundary for the user =>  AmazonEC2FullAccess 
+	so that the user can access only the Ec2services
+6)Add key-value which user will receive

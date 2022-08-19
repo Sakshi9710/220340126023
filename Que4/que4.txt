@@ -1,0 +1,20 @@
+1)Make a DockerFile which will contain Which
+	=>which python image we are using
+	=>the mantainer name
+	=>work directory detail i.e where the file is getting save in container
+	=>And the command to run the Python file.
+
+2)make a Python file which will contain code the code
+
+3)Create a docker image => sudo docker build -t pythoncode:pv2 .
+
+4)spin the container =>sudo docker container run -it pythoncode:pv2
+
+5)sudo Steps to push the image in docker hub:=>
+
+	=>sudo docker tag pythoncode:pv2 sakshi0810/diot_023:v0
+	=>sudo docker login  ***enter the cred once promoted
+		sudo docker login
+	=>sudo docker push sakshi0810/diot_023:v0
+
+

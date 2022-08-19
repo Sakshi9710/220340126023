@@ -1,0 +1,30 @@
+
+1)Login to to Your AWS Account.
+2)Go to EC2 service in the AWS.
+3)Go to Instances .
+4)Create a Instance by => Launch a Instance .
+    =>Give your Instance A name =>diot_023 .
+    =>Select The Operating System => ubuntu-20.04 .
+    =>Select Instance type => t2.micro
+    =>Generate a Key-value pair key and save it for future use.
+    =>Launch Your instance.
+    =>Change Security Group inbound Configuration 
+    =>click on the security group => Edit Inbound Security
+    =>make only port no 22 and 1883 only open.
+5)To connect to your Instance follow the following steps=>
+    =>Most important Your should in the directory where your private key is their.
+    =>Give Permision to private key =>chmod 400 pg_diot.pem
+    =>ssh from your terminal to access the instance =>
+    ssh -i "pg_diot.pem" ubuntu@ec2-52-66-239-70.ap-south-1.compute.amazonaws.com
+
+6)After connection to your Instance , Follow the following command to insatll mosquitto 
+    =>sudo apt update 
+    =>sudo apt install -y mosquitto
+    =>sudo systemctl status mosquitto
+
+7)Bellow are the two command to test the connection=>
+	=>mosquitto_sub -t testmqtt/cdac -h 52.66.239.70 -p 1883 -d
+	=>mosquitto_pub -t testmqtt/cdac -h 52.66.239.70 -p 1883 -m "hello" -d
+
+
+
